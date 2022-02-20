@@ -1,4 +1,5 @@
 # workshop-git
 
-Liens utiles :
-https://github.com/cpumons/gradle_template
+Liens utiles :  
+https://github.com/cpumons/gradle-template  
+https://github.com/cpumons/latex-template
