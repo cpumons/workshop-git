@@ -73,7 +73,7 @@
 %\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
 %\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
 
-%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
 }
 
 \usepackage{graphicx} % Allows including images
@@ -83,16 +83,16 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Short title]{Full Title of the Talk} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[Github]{Découverte de git par la pratique} % The short title appears at the bottom of every slide, the full title is only on the title page
 
-\author{John Smith} % Your name
-\institute[UCLA] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+\author{Ugo Proietti} % Your name
+\institute[UMONS] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
-University of California \\ % Your institution for the title page
+Université de Mons \\ % Your institution for the title page
 \medskip
-\textit{john@smith.com} % Your email address
+\textit{ugo.proietti@student.umons.ac.be} % Your email address
 }
-\date{\today} % Date, can be changed to a custom date
+\date{23 février 2022} % Date, can be changed to a custom date
 
 \begin{document}
 
@@ -101,7 +101,7 @@ University of California \\ % Your institution for the title page
 \end{frame}
 
 \begin{frame}
-\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\frametitle{} % Table of contents slide, comment this block out to remove it
 \tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
 \end{frame}
 
@@ -110,31 +110,91 @@ University of California \\ % Your institution for the title page
 %----------------------------------------------------------------------------------------
 
 %------------------------------------------------
-\section{First Section} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\section{Que sont git et GitHub} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 %------------------------------------------------
 
-\subsection{Subsection Example} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\begin{frame}\frametitle{Git $\neq$ GitHub}
+Git est un programme permettant aux développeurs de gérer les différentes versions de leur programme et de collaborer sur le même projet.\\~\\
 
-\begin{frame}
-\frametitle{Paragraphs of Text}
-Sed iaculis dapibus gravida. Morbi sed tortor erat, nec interdum arcu. Sed id lorem lectus. Quisque viverra augue id sem ornare non aliquam nibh tristique. Aenean in ligula nisl. Nulla sed tellus ipsum. Donec vestibulum ligula non lorem vulputate fermentum accumsan neque mollis.\\~\\
-
-Sed diam enim, sagittis nec condimentum sit amet, ullamcorper sit amet libero. Aliquam vel dui orci, a porta odio. Nullam id suscipit ipsum. Aenean lobortis commodo sem, ut commodo leo gravida vitae. Pellentesque vehicula ante iaculis arcu pretium rutrum eget sit amet purus. Integer ornare nulla quis neque ultrices lobortis. Vestibulum ultrices tincidunt libero, quis commodo erat ullamcorper id.
+GitHub est un site permettant d'héberger des repository git. Il en existe d'autres tels que GitLab ou Bitbucket.
 \end{frame}
 
 %------------------------------------------------
 
-\begin{frame}
-\frametitle{Bullet Points}
+\begin{frame}\frametitle{Git}
 \begin{itemize}
-\item Lorem ipsum dolor sit amet, consectetur adipiscing elit
-\item Aliquam blandit faucibus nisi, sit amet dapibus enim tempus eu
-\item Nulla commodo, erat quis gravida posuere, elit lacus lobortis est, quis porttitor odio mauris at libero
-\item Nam cursus est eget velit posuere pellentesque
-\item Vestibulum faucibus velit a augue condimentum quis convallis nulla gravida
+    \item Gestion de versions
+    \item Collaboration avec d'autres développeurs
+    \item Gestion de conflits
+    \item Développement non linéaire
 \end{itemize}
 \end{frame}
 
+%------------------------------------------------
+
+\begin{frame}\frametitle{GitHub}
+\begin{itemize}
+    \item Un des sites les plus connus
+    \item GitHub pro gratuit en étudiant
+    \item Actions pour automatiser ce qu'on veut
+    \item Arctic code vault
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+\section{Comment utiliser les outils} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+\begin{frame}\frametitle{Installer git et/ou GitHub Desktop}
+    Pour la version CLI, il suffit d'avoir git installé sur sa machine. Il faudra ensuite générer une clé SSH et l'ajouter sur GitHub.com \\~\\
+
+    Pour la version GUI, installez GitHub Desktop et connectez vous à cotre compte. 
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}\frametitle{Creer un repository}
+    A faire depuis le site GitHub.com. Le site donnera les instructions à réaliser avec git CLI. \\~\\
+
+    Pour les utilisateurs GitHub Desktop, vous pouvez directement créer un repository depuis le menu File $>$ New repository... 
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}\frametitle{Editer un repository}
+    \begin{itemize}
+    \item Depuis GitHub.com, allez sur le repository concerné et cliquez sur le bouton \textbf{Fork}. Pour la présentation, faites le avec \textbf{cpumons/workshop-git}\\
+        \item Clonez sur votre machine le nouveau repository \\
+        \item Faites vos modifications (voir slide suivante) \\
+        \item Créez une pull request en cliquant sur \textbf{Contribute}
+    \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}\frametitle{Commandes de base}
+    \begin{itemize}
+        \item \$ vi 2022.md
+        \item \$ git add 2022.md
+        \item \$ git commit -m "Ma modification"
+        \item \$ git push
+    \end{itemize}
+
+    Retournez à la dernière étape de la slide précédente
+\end{frame}
+
+%------------------------------------------------
+\section{Cas pratiques} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+\begin{frame}\frametitle{Deux exemples à votre disposition}
+    Il existe 2 repository sur le GitHub de CPUMons : \textbf{cpumons/gralde-template} et \textbf{cpumons/latex-template}. \\~\\
+
+    Nous allons les utiliser pour configurer votre projet Gradle (pour les étudiants ayant le projet bac1 ou bac2) et découvrir comment automatiser des actions.
+\end{frame}
+%------------------------------------------------
 %------------------------------------------------
 
 \begin{frame}
