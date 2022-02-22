@@ -88,7 +88,8 @@
 \author{Ugo Proietti} % Your name
 \institute[UMONS] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
-Université de Mons \\ % Your institution for the title page
+Université de Mons \\
+CPUMons \\ % Your institution for the title page
 \medskip
 \textit{ugo.proietti@student.umons.ac.be} % Your email address
 }
@@ -105,9 +106,9 @@ Université de Mons \\ % Your institution for the title page
 \tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
 \end{frame}
 
-%----------------------------------------------------------------------------------------
+%------------------------------------------------
 %	PRESENTATION SLIDES
-%----------------------------------------------------------------------------------------
+%------------------------------------------------
 
 %------------------------------------------------
 \section{Que sont git et GitHub} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
@@ -126,7 +127,7 @@ GitHub est un site permettant d'héberger des repository git. Il en existe d'aut
     \item Gestion de versions
     \item Collaboration avec d'autres développeurs
     \item Gestion de conflits
-    \item Développement non linéaire
+    \item Développement non-linéaire
 \end{itemize}
 \end{frame}
 
@@ -135,40 +136,39 @@ GitHub est un site permettant d'héberger des repository git. Il en existe d'aut
 \begin{frame}\frametitle{GitHub}
 \begin{itemize}
     \item Un des sites les plus connus
-    \item GitHub pro gratuit en étudiant
+    \item GitHub pro gratuit pour étudiant
     \item Actions pour automatiser ce qu'on veut
     \item Arctic code vault
 \end{itemize}
 \end{frame}
 
 %------------------------------------------------
-
-%------------------------------------------------
 \section{Comment utiliser les outils} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 %------------------------------------------------
 
 \begin{frame}\frametitle{Installer git et/ou GitHub Desktop}
-    Pour la version CLI, il suffit d'avoir git installé sur sa machine. Il faudra ensuite générer une clé SSH et l'ajouter sur GitHub.com \\~\\
+    Pour la version CLI, il suffit d'avoir git installé sur sa machine (déjà installé sur Linux ; Git Bash pour windows). Il faudra ensuite générer une clé SSH et l'ajouter sur GitHub.com \\~\\
 
-    Pour la version GUI, installez GitHub Desktop et connectez vous à cotre compte. 
+    Pour la version GUI, installez GitHub Desktop et connectez-vous à votre compte. 
 \end{frame}
 
 %------------------------------------------------
 
-\begin{frame}\frametitle{Creer un repository}
-    A faire depuis le site GitHub.com. Le site donnera les instructions à réaliser avec git CLI. \\~\\
+\begin{frame}\frametitle{Créer un repository}
+    À faire depuis le site GitHub.com. Le site donnera les instructions à réaliser avec git CLI. \\~\\
 
     Pour les utilisateurs GitHub Desktop, vous pouvez directement créer un repository depuis le menu File $>$ New repository... 
 \end{frame}
 
 %------------------------------------------------
 
-\begin{frame}\frametitle{Editer un repository}
+\begin{frame}\frametitle{Éditer un repository}
     \begin{itemize}
-    \item Depuis GitHub.com, allez sur le repository concerné et cliquez sur le bouton \textbf{Fork}. Pour la présentation, faites le avec \textbf{cpumons/workshop-git}\\
+    \item Depuis GitHub.com, allez sur le repository concerné et cliquez sur le bouton \textbf{Fork}. Pour la présentation, faites-le avec \textbf{cpumons/workshop-git}\\
         \item Clonez sur votre machine le nouveau repository \\
         \item Faites vos modifications (voir slide suivante) \\
         \item Créez une pull request en cliquant sur \textbf{Contribute}
+        \item (Gérez les conflits, voir slide 10)
     \end{itemize}
 \end{frame}
 
@@ -187,6 +187,19 @@ GitHub est un site permettant d'héberger des repository git. Il en existe d'aut
 
 %------------------------------------------------
 
+\begin{frame}[fragile]\frametitle{Gestion des conflits}
+    Si deux développeurs modifient le même fichier, un conflit va apparaître.
+    \begin{verbatim}
+    <<<<<<< HEAD
+        Mon code
+    =======
+        Code précédent
+    >>>>>>> Autre branche
+    \end{verbatim}
+\end{frame}
+
+%------------------------------------------------
+
 \begin{frame}\frametitle{Branches}
     \begin{center}
         \includegraphics[scale=0.185]{branch.png}
@@ -200,7 +213,7 @@ GitHub est un site permettant d'héberger des repository git. Il en existe d'aut
 %------------------------------------------------
 
 \begin{frame}\frametitle{.gitignore}
-    Fichier stockant une liste d'exception. \\~\\
+    Fichier stockant une liste d'exceptions. \\~\\
 
     Des générateurs existent, par exemple gitignore.io
 \end{frame}
@@ -212,129 +225,9 @@ GitHub est un site permettant d'héberger des repository git. Il en existe d'aut
 \begin{frame}\frametitle{Deux exemples à votre disposition}
     Il existe 2 repository sur le GitHub de CPUMons : \textbf{cpumons/gradle-template} et \textbf{cpumons/latex-template}. \\~\\
 
-    Nous allons les utiliser pour configurer votre projet Gradle (pour les étudiants ayant le projet bac1 ou bac2) et découvrir comment automatiser des actions. Ou pour travailler sur un fichier Latex et le compiler depuis GitHub.
-\end{frame}
-
-%------------------------------------------------
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Blocks of Highlighted Text}
-\begin{block}{Block 1}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-\end{block}
-
-\begin{block}{Block 2}
-Pellentesque sed tellus purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum quis magna at risus dictum tempor eu vitae velit.
-\end{block}
-
-\begin{block}{Block 3}
-Suspendisse tincidunt sagittis gravida. Curabitur condimentum, enim sed venenatis rutrum, ipsum neque consectetur orci, sed blandit justo nisi ac lacus.
-\end{block}
+    Nous allons les utiliser pour configurer votre projet Gradle (pour les étudiants ayant le projet bac 1 ou bac 2) et découvrir comment automatiser des actions ou pour travailler sur un fichier Latex et le compiler depuis GitHub.
 \end{frame}
 
 %------------------------------------------------
 
-\begin{frame}
-\frametitle{Multiple Columns}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
-\textbf{Heading}
-\begin{enumerate}
-\item Statement
-\item Explanation
-\item Example
-\end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
-\end{columns}
-\end{frame}
-
-%------------------------------------------------
-\section{Second Section}
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Table}
-\begin{table}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\end{table}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Verbatim}
-\begin{example}[Theorem Slide Code]
-\begin{verbatim}
-\begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}\end{verbatim}
-\end{example}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Figure}
-Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
-%\begin{figure}
-%\includegraphics[width=0.8\linewidth]{test}
-%\end{figure}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Citation}
-An example of the \verb|\cite| command to cite within the presentation:\\~
-
-This statement requires citation \cite{p1}.
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{References}
-\footnotesize{
-\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
-\bibitem[Smith, 2012]{p1} John Smith (2012)
-\newblock Title of the publication
-\newblock \emph{Journal Name} 12(3), 45 -- 678.
-\end{thebibliography}
-}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\Huge{\centerline{The End}}
-\end{frame}
-
-%----------------------------------------------------------------------------------------
-
-\end{document} 
+\end{document}
